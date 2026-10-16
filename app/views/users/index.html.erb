@@ -1,0 +1,22 @@
+<h1>ユーザ一覧</h1>
+
+<%= link_to "新規ユーザ登録", new_user_path %>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>ユーザ名</th>
+    <th>操作</th>
+  </tr>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.uid %></td>
+      <td>
+        <%= link_to "削除", user_path(user),
+            data: { turbo_method: :delete, turbo_confirm: "削除しますか？" } %>
+      </td>
+    </tr>
+  <% end %>
+</table>

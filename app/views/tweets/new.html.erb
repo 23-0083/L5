@@ -1,0 +1,15 @@
+
+<h1>新規ツイート</h1>
+
+<p>投稿者：<%= session[:login_uid] %></p>
+
+<%= form_with model: @tweet do |f| %>
+  <p>
+    <%= f.label :message, "メッセージ" %>
+    <%= f.text_area :message %>
+  </p>
+
+  <%= f.submit "投稿" %>
+<% end %>
+
+<p><%= link_to "ツイート一覧に戻る", tweets_path %></p>
