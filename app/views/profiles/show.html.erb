@@ -1,0 +1,7 @@
+<h1>プロフィール</h1>
+
+<p>ユーザーID：<%= @current_user.uid %></p>
+<p>自己紹介：<%= @profile.message %></p>
+
+<%= link_to "プロフィールを編集", edit_profile_path %>
+<%= link_to "ツイート一覧に戻る", tweets_path %>

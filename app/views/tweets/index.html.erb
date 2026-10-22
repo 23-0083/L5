@@ -3,6 +3,7 @@
 <% if session[:login_uid] %>
   <p>
     ログイン中：<%= session[:login_uid] %>
+    <%= link_to "プロフィール", profile_path %>
     <%= link_to "ログアウト", top_logout_path %>
   </p>
 

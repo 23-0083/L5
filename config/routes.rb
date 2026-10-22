@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :profile, only: [:show, :new, :create, :edit, :update]
+
   resources :users, only: [:index, :new, :create, :destroy]
   resources :tweets, only: [:index, :new, :create, :destroy]
   resources :likes, only: [:create, :destroy]
